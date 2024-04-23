@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+body {
+  background-image: url("src/assets/images/bg-pattern-desktop.svg"), linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)), linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1,
+span,
+p {
+  opacity: 0.8;
+  line-height: 1.2;
+}
+h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  letter-spacing: 15px;
+}
+span,
+p,
+input {
+  color: hsl(0, 36%, 70%);
+  line-height: 1.5;
+
+}
+p {
+  font-size: 16px;
+}
+span {
+  font-weight: 300;
+}
+
+/* *************************************MOBILE ViewPort CODE***************************************** */
+
+@media (max-width: 950px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+ 
+  .item.text {
+    text-align: center;
+  }
+
+.form-wrapper{
+  margin: 35px auto;
+
+}
+.item.image img {
+  width: 100%;
+  height: 100%;
+}
+ h1{
+  padding: 9.5% 0;
+ }
+
+
+}
+
+/* *************************************DESKTOP ViewPort CODE***************************************** */
+
+@media (min-width: 950px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .item.image{
+    grid-row: span 2;
+   }
+p{
+  max-width: 85%;
+  line-height: 2;
+}
+h1{
+  font-size: 3.5rem;
+}
+.item.image img {
+  height: 100dvh;
+  width: 100%;
+
+}
+
+/* *************************************UNIVERSAL CODE***************************************** */
+}
+.outer.container {
+  min-height: 100vh;
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-rows: auto;
+
+}
+.item.header,
+.item.text,
+.form {
+  margin-inline: 7.5%;
+}
+
+.item.header>img {
+  margin-block: 7.5%;
+  margin-inline: 10%;
+
+}
+
+
+
+input {
+  width: 90%;
+  height: 100%;
+  z-index: 1;
+  border: none;
+  outline: none;
+  display: inline;
+  background-color: inherit;
+  padding-left: 24px;
+}
+input:focus{
+  border: none;
+  cursor: pointer;
+}
+.error-icon {
+  height: 50%;
+  right: 80px;
+  position: absolute;
+  z-index: 2;
+}
+button {
+  width: 65px;
+  height: 100%;
+  border: none;
+  border-radius: 30px;
+  position: absolute;
+  right: -15px;
+  background-color: hsl(0, 93%, 68%);
+}
+.form-wrapper {
+  position: relative;
+  display: flex;
+  width: 80%;
+  margin-inline: 7.5%;
+  margin-block: 7.5% 0;
+  height: 50px;
+  border: 1px solid hsl(0, 36%, 70%);
+  opacity: 0.5;
+  border-radius: 30px;
+  align-items: center;
+}
+.error-state{
+  border: 1px solid hsl(0, 93%, 68%);
+  opacity: 1;
+
+
+}
+.error-message{
+  color: hsl(0, 93%, 68%);
+  margin-inline: 11.5%;
+  padding-top: 2.5%;
+
+}
