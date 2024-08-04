@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* ----------COMMON STYLES & RESPONSIVENESS!!!!---------- */
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+.container {
+  max-width: 1110px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+.link {
+  justify-content: center;
+  width: 13.7rem;
+  height: 4.45rem;
+  border-radius: 2.8rem;
+  background-color: var(--Bright-Red);
+  color: var(--Very-Light-Gray);
+  font-weight: 500;
+  font-size: 1.28rem;
+  padding-top: 1px;
+  padding-right: 1px;
+  letter-spacing: -0.025rem;
+}
+.nav-link,.footer-link{
+  width: fit-content;
+  position: relative;
+}
+/* ACTIVE STATES FOR NAV & FOOTER LINKS */
+.nav-link:not(.nav-link.link):before,
+.footer-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: var(--Bright-Red);
+  left: 0;
+  bottom: -3px;
+  transform: scale(0);
+  transition: 0.3s ease;
+}
+.nav-link:not(.nav-link.link):hover::before,
+.footer-link:hover:before {
+  transform: scale(1);
+}
+.nav-link:hover,.footer-link:hover {
+  color: var(--Bright-Red);
+}
+.link:hover {
+  opacity: .7;
+  transform: scale(1.1);
+}
+
+/* ------------------------RESPONSIVENESS----------------------------- */
+
+/* ----------NAVBAR ---------- */
+@media (width <= 850px) {
+  .toggle-container{
+    display: flex;
+  }
+  .links-container{
+    flex-direction: column;
+    gap: 2.5rem;
+    position: absolute;
+    top: 100%;
+    margin-top: 4rem;
+    width: 100%;
+    padding: 4rem 2.4rem;
+    background-color: var(--Very-Light-Gray);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.144);
+    border-radius: 1rem;
+    display: none;
+  }
+  .links-container.open{
+    display: flex;
+  }
+  .nav-link,.links-container{
+    margin-right: 0 !important;
+  }
+  .nav-link{
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  .link.nav-cta{
+    display: none;
+  }
+}
+@media (width <= 1160px) {
+
+
+/* ----------HERO ---------- */
+.hero::after{
+display: none;
+}
+.hero{
+  background-image: url("./assets/images/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-position-y: -25%;
+  background-position-x: 30vw;
+
+}
+.hero-inner{
+  flex-direction: column;
+  text-align: center;
+  gap: 4rem;
+}
+.hero-img,.hero-text-container{
+  margin: 0;
+}
+.hero-image{
+  max-width: fit-content;
+  width: 100%;
+}
+.hero-img{
+  width: 100%;
+  height: auto;
+}
+.hero-parag,.link.hero-cta{
+margin: 3rem auto 0 auto ;
+}
+.hero-title{
+  font-size:clamp(3rem, 8vw, 5.2rem)
+}
+
+/* ----------FEATURES ---------- */
+.features::before{
+  display: none;
+}
+.features{
+  background: url("./assets/images/bg-tablet-pattern.svg") no-repeat;
+  background-position-x: 60vw;
+  background-position-y: top;
+  background-size: contain;
+  margin-top: 10rem;
+}
+.features-inner.container{
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+.feature-text-container{
+  text-align: center;
+}
+.feature-parag {
+  margin: 3rem auto 0 auto;
+}
+
+/* ----------TESTIMONIAL ---------- */
+.testimonial{
+  margin-top: 7rem;
+}
+
+/* ----------CTA & FOOTER & FORM ---------- */
+.cta{
+  background-image: url("./assets/images/bg-simplify-section-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+  .cta-inner.container,.footer-inner.container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem 2.4rem;
+  }
+
+  .footer-inner.container{
+    gap: 0;
+    flex-direction: column-reverse;
+  }
+  .logo-socials-container{
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+  .socials-container{
+    gap: 3rem;
+    transform: scale(1.5);
+  }
+  .footer-links-container{
+   text-align: left;
+   margin-top: 4rem;
+}
+.footer-links-wrapper{
+  max-width: none;
+  justify-content: center;
+  gap: 10rem;
+  margin-right: 0;
+}
+.copyright.mobile{
+  display: flex;
+  text-align: center;
+  text-align: center;
+  position: relative;
+  margin-top: 5rem;
+  font-size: 2rem;
+}
+.copyright.desktop{
+  display: none;
+}
+.form-container{
+  max-width: 300px;
+  width: 100%;
+  flex-direction: column;
+  gap: 2rem;
+}
+.button.field{
+  max-width: 300px;
+  width: 100%;
+}
+.my-input{
+  width: 300px;
+}
+.form-btn{
+  padding: 0;
+  font-size: 1.6rem;
+
+}
+}

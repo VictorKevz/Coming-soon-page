@@ -1,0 +1,23 @@
+.cta {
+  min-height: 220px;
+  justify-content: center;
+  position: relative;
+  background: url("../../assets/images/bg-simplify-section-desktop.svg") no-repeat;
+  background-color: var(--Bright-Red);
+  background-position: 17.7vw 100%;
+}
+
+.cta-title {
+  font-size: 3.7rem;
+  line-height: 1.19;
+  letter-spacing: 0.055rem;
+  font-weight: 500;
+  max-width: 450px;
+  margin-top: 2px;
+  color: var(--Very-Light-Gray);
+}
+.link.cta-link {
+  background-color: var(--Very-Light-Gray);
+  color: var(--Bright-Red);
+  margin-right: -4px;
+}
